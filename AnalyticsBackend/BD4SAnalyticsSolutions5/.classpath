@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="lib/BD4SUtils.jar"/>
+	<classpathentry kind="lib" path="lib/bonecp-0.7.1.RELEASE.jar"/>
+	<classpathentry kind="lib" path="lib/commons-lang3-3.3.2.jar"/>
+	<classpathentry kind="lib" path="lib/gephi-db-drivers-0.9.jar"/>
+	<classpathentry kind="lib" path="lib/gephi-toolkit.jar"/>
+	<classpathentry kind="lib" path="lib/gson-2.2.4.jar"/>
+	<classpathentry kind="lib" path="lib/guava-18.0.jar"/>
+	<classpathentry kind="lib" path="lib/javaee-api-7.0.jar"/>
+	<classpathentry kind="lib" path="lib/javaee-web-api-7.0.jar"/>
+	<classpathentry kind="lib" path="lib/jersey-bundle-1.17.1.jar"/>
+	<classpathentry kind="lib" path="lib/slf4j-api-1.7.5.jar"/>
+	<classpathentry kind="lib" path="lib/vertica-jdk5-6.0.1-0.jar"/>
+	<classpathentry kind="lib" path="lib/WFMTemplate-3.0.0.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

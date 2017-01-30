@@ -1,0 +1,46 @@
+{
+    "MethodConfigurationFile": [
+        {
+            "MethodDefinition": [
+                {
+                    "buildGUIGraphFile": [
+                        {
+                            "type": "tableNames",
+                            "table1": "hpldnsqueries"
+                        },
+                        {
+                            "type": "LocalVariables",
+                            "cfp1": "80",
+                            "timeStampLiteral": "timestamp",
+                            "defaultLayout": "fr"
+                        },
+                        {
+                            "type": "query",
+                            "query1": "select trim(src) as source, trim(request) as target, count(trim(request)) as weight from <param4>.hpldnsqueries where <timeStampBuilderForTimeInterval> AND isBlacklisted ='true' and cat='Q' and replace(cfp1,'.0','')::INT>'<param3>' and trim(src)!=trim(request) <param5> group by trim(src),trim(request)",
+                            "param": [
+                                {
+                                    "<param1>": "tzCast"
+                                },
+                                {
+                                    "<param2>": "Date"
+                                },
+                                {
+                                    "<param3>": "cfp1"
+                                },
+                                {
+                                    "<param4>": "DBschema"
+                                },
+                                {
+                                    "<param5>": "filtering"
+                                },
+                                {
+                                    "<timeStampBuilderForTimeInterval>": "timeStamp"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,20 @@
+{
+    "MethodConfigurationFile": [
+        {
+            "MethodDefinition": [
+                {
+                    "CommonMethods": [
+                        {
+                            "type": "query",
+                            "query1": "select * from IpFiltering"
+                        },
+						{
+                            "type": "query",
+                            "query2": "select * from DNFiltering"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

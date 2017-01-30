@@ -1,0 +1,97 @@
+{
+    "MethodConfigurationFile": [
+        {
+            "MethodDefinition": [
+                {
+                    "buildGUIGraphDGAGenFile": [
+                        {
+                            "type": "tableNames",
+                            "table1": "hpldnsreplies"
+                        },
+                        {
+                            "type": "LocalVariables",
+                            "cfp1": "80",
+                            "timeStampLiteral": "timestamp",
+                            "defaultLayout": "fr",
+                            "defaultMinOutDegree": "40",
+                            "outDegreeByTime": [
+                                {
+                                    "Time1": "01:59",
+                                    "outDegree1": "20"
+                                },
+                                {
+                                    "Time2": "03:59",
+                                    "outDegree2": "20"
+                                },
+                                {
+                                    "Time3": "05:59",
+                                    "outDegree3": "20"
+                                },
+                                {
+                                    "Time4": "07:59",
+                                    "outDegree4": "20"
+                                },
+                                {
+                                    "Time5": "09:59",
+                                    "outDegree5": "30"
+                                },
+                                {
+                                    "Time6": "11:59",
+                                    "outDegree6": "40"
+                                },
+                                {
+                                    "Time7": "13:59",
+                                    "outDegree7": "50"
+                                },
+                                {
+                                    "Time8": "15:59",
+                                    "outDegree8": "60"
+                                },
+                                {
+                                    "Time9": "17:59",
+                                    "outDegree9": "70"
+                                },
+                                {
+                                    "Time10": "19:59",
+                                    "outDegree10": "80"
+                                },
+                                {
+                                    "Time11": "21:59",
+                                    "outDegree11": "90"
+                                },
+                                {
+                                    "Time12": "23:59",
+                                    "outDegree12": "100"
+                                }
+                            ]
+                        },
+                        {
+                            "type": "query",
+                            "query1": "select trim(dst) as source, trim(request) as target, count(*) as weight, cat, cs1, cfp1  from <param4>.hpldnsreplies where <timeStampBuilderForTimeInterval> and isDGA='true' and isBlacklisted = 'false' and ((cat='A' and cs2='answer') OR (cat='NXDOMAIN')) and cs1 LIKE '%DGA-Generic%' <param5> group by dst, request, cat, cs1, cfp1",
+                            "param": [
+                                {
+                                    "<param1>": "tzCast"
+                                },
+                                {
+                                    "<param2>": "Date"
+                                },
+                                {
+                                    "<param3>": "cfp1"
+                                },
+                                {
+                                    "<param4>": "DBschema"
+                                },
+                                {
+                                    "<param5>": "filtering"
+                                },
+                                {
+                                    "<timeStampBuilderForTimeInterval>": "timeStamp"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

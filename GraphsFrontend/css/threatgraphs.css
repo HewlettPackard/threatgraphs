@@ -1,0 +1,619 @@
+(c) Copyright 2017 Hewlett Packard Enterprise Development LP Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at "http://www.apache.org/licenses/LICENSE-2.0" Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+@font-face {
+  font-family: 'Metric Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: url('../fonts/Metric-Regular.otf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Metric Light';
+    font-style: normal;
+    font-weight: normal;
+    src: url('../fonts/Metric-Light.otf') format('truetype');
+  }
+
+.header_container { 
+  
+  background-color:#425563; 
+  height: 100px; 
+  margin-bottom:30px
+}
+
+.header_container h1{
+    color: #01A982;
+    font-weight: bold;
+    font-size: 45px;
+    font-family: 'Metric Regular';
+    line-height: 80px;
+    display: inline;
+    margin: 20px 0px 0px 70px;
+}
+
+.header_container h2{
+    color: #999999;
+    font-weight: bold;
+    font-size: 35px;
+    font-family: 'Metric Regular';
+    line-height: 100px;
+    display: inline;
+    margin: 60px 0px 0px 0px;
+    padding-left: 350px;
+}
+.header_container img.logo {
+    display: block;
+    height: 50px;
+    margin: 20px 0px 0px 10px;
+    width: 120px;
+    float:left;
+}
+
+.header_container img.logoLabs {
+    display: inline;
+    height: 55px;
+    margin: 20px 10px 0px 0px;
+    width: 170px;
+    float:right;
+}
+
+.hf_section { 
+  margin: 0 auto; 
+  width: 100%; 
+  float:left
+}
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+  color:#5F5F5F;
+  font-family: 'Metric Regular';
+  font-size: 16px;
+  
+}
+
+#dateTime {
+  color: #CACACA;
+  font-family:'Metric Light';
+  font-size:24px;
+  line-height: 24px;
+  position:relative;
+}
+
+/*Overwrite bootstrap!*/
+.container {
+  width: 96%;
+}
+
+ .dropdown-menu>li.active>a{
+  background-color: #D1D1D1;
+} 
+
+.dropdown-menu>li.active>a:hover{
+  background-color: #cccccc;
+} 
+
+ 
+h1, h2, h3, h4, h5, .my-profile span, .number-stats {
+  /*font-family: 'Lato', Arial, Helvetica, sans-serif;*/
+  color:#425563;
+  font-family: 'Metric Regular';
+}
+
+.light h1, .light h2, .light h3, .light h4, .light h5, .light h6 {
+  font-weight:normal;
+}
+
+a, a.active {
+  color:#333;
+}
+a:hover, a:focus {
+  text-decoration:none;
+}
+
+.blendTitle {
+  color: #CACACA;
+  font-size: 23px;
+  line-height: 23px;
+  font-weight: 400;
+  position: relative;
+  display: block;
+  width:100%;
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*  Keep footer down
+/* ---------------------------------------------------------------------- */
+
+.height-wrapper {
+  height: auto !important;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto -40px;
+  min-height: 100%;
+}
+
+.footer .push {
+  position:relative;
+  height: 100px; 
+}
+
+footer {
+  height:40px;
+  background-color:#dfdfdf;
+  color:#888;
+  position:relative; 
+  /* margin-top:5px;*/
+}
+
+
+
+/* ---------------------------------------------------------------------- */
+/*  Page content divs
+/* ---------------------------------------------------------------------- */
+
+/* div that engulfs the entire content and aside  */
+
+div#main {
+  /*height: 100%;*/
+  position: relative;
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+}
+
+/* applies the page content div */
+
+#page-content {
+  padding: 20px 25px 0;
+  overflow: hidden;
+  height:100%;
+  margin-top:15px;
+  border-radius:10px 0px 0px 10px;
+  -webkit-border-radius: 10px 0px 0px 10px;
+  -moz-border-radius: 10px 0px 0px 10px;
+  background:url('../img/bgnoise.png');
+  box-sizing:border-box;
+  -moz-box-sizing:border-box;
+}
+
+#graph-img{
+  background:url('../img/graph3.png');    
+  width:239px;
+  height: 239px;
+  position: relative;
+}
+
+.indented {
+  padding: 10px !important;
+  background: url('../img/transparant-20.png');
+  box-shadow: 0 1px 1px #606060, 0 1px 1px #2a2a2a inset;
+  -webkit-box-shadow: 0 1px 1px #606060, 0 1px 1px #2a2a2a inset;
+  -moz-box-shadow: 0 1px 1px #606060, 0 1px 1px #2a2a2a inset;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.insideTab {
+  position: relative;
+  width:100%;
+  height: 960px;
+}
+
+.divider {
+  height:11px;
+  width:100%;
+  background: url('../img/divider.png') no-repeat center 0;
+  position:relative;
+  margin:20px 0;
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*  Page content header
+/* ---------------------------------------------------------------------- */
+
+div#main .page-header, h1.message-title {
+  display: block;
+  margin: 10px 0 20px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 40px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted transparent;
+  text-transform:capitalize;
+  text-shadow: 0px 1px 0px white;
+    
+  -webkit-text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+  text-shadow: 0px 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+
+.panel,.panel-heading {
+    border-radius:0;
+    border-width:0;
+    -webkit-box-shadow: 0 3px 3px rgba(0, 0, 0, 0.09);
+    box-shadow: 0 3px 3px  rgba(0, 0, 0, 0.09);
+}
+
+
+.text-box {
+  left: 50px;
+
+}
+
+.center{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*  SigmaGraphs 
+/* ---------------------------------------------------------------------- */  
+
+.sigma-parent {
+  position: relative;
+  /*width: 100%; done by bootstrap */
+  height: 860px;
+  left: 5px;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  /*background: #FFFFFF;*/
+  
+}
+.sigma-expand {
+  position: absolute;
+  width: 100%;
+  height: 98%;
+  top: 1;bottom: 1;
+  left: 0;
+}
+
+.graph-search  {
+  position:relative;
+  /*width: 95%;*/
+}
+
+.graph-search input {
+  height: 25px;
+  margin-left: 25px;
+  font-size: 12px;
+  line-height: normal;
+  padding-left: 25px;
+  width:100%;
+  border:1px solid #4E4E4E;
+}
+.graph-search label {
+  position:absolute;
+  top: 6px;
+  left: 9px;
+  color: #757272;
+}
+
+.icon-search {
+  margin-left: 25px;
+}
+
+  .color-box {
+    width: 10px;
+    height: 10px;
+    margin: 0px 0px 0px 5px;
+    display: inline-block;
+  }
+
+  .sigma-tooltip {
+    background-color: #F3F3F3;
+    display: inline-block;
+    width: auto;
+    height: auto;
+    border-radius: 0px 10px 10px 10px;
+    border: 2px solid #F8F8F8;
+    padding: 10px;
+    border: 3px solid #FFFFFF;
+  }
+
+/* ---------------------------------------------------------------------- */
+/*  JustGague 
+/* ---------------------------------------------------------------------- */  
+ 
+.g-chart {
+  /*width: 150px;
+  height: 120px;*/
+  width: 100%;
+  height: 120px;
+  display: inline-block;
+  /*margin: 10px auto 10px auto;*/
+}
+
+
+.tooltip-inner {
+  min-width: 100px; 
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*  SparkLine Charts
+/* ---------------------------------------------------------------------- */ 
+
+#mystats {
+font-size: 17px;
+/*position:relative;*/
+/*width:1200px;*/
+}
+
+.mychart {
+  margin-top:5px;
+  margin-bottom:5px;
+  /*position:relative;*/
+  height:70px;
+  width: 135px;
+  display:inline-block;
+  
+}
+
+.jqstooltip{ 
+     width:110px;
+     height:40px!important;
+  }
+
+/* ---------------------------------------------------------------------- */
+/*  Map
+/* ---------------------------------------------------------------------- */
+#client-map{
+  height: 400px;
+}
+
+/* ---------------------------------------------------------------------- */
+/*  D3 Charts
+/* ---------------------------------------------------------------------- */
+
+.left-chart {
+      background-color: #fff;
+      margin: 25px 25px 0 25px;
+  }
+.upper-chart {
+      background-color: #fff;
+      margin: 0 0 0 25px;
+  }
+
+.side-table {
+      background-color: #fff;
+      margin: 25px 0 0 0;
+  }
+
+.chart { 
+font-size: 9px !important;
+display: block;
+margin-right: 10px;
+}
+
+.axis path, .axis line {
+fill: none;
+stroke: #000;
+stroke-width: 2px;
+shape-rendering: crispEdges;
+}
+
+.legend rect {
+fill:white;
+stroke:black;
+opacity:0.8;
+font: 10px !important;
+}
+
+#alert-type-count-chart g.row rect {
+      stroke: none;
+      fill: none;
+}
+
+#alert-type-title-chart g.row text {
+      
+      font-size: 11px;
+}
+
+.chart-title {
+  font-size: 18px;
+  font-weight: bold;
+  line-height : 34px;
+  display: inline-block;
+}
+
+
+
+#alert-type-title-chart rect{
+
+
+       width:60px !important;
+      stroke: none;
+      fill: none;
+}
+
+
+#alert-type-title-chart rect.selected {
+      
+      
+      fill: #ccc;
+}
+
+#stream-chart {
+  height: 360px;
+}
+
+#ind-chart{
+  height: 400px;
+}
+
+#multi-chart{
+  height: 400px;
+}
+
+#bubble-chart{
+  height:350px;
+}
+
+#domain-chart {
+  /*width: 1520px;*/
+  height: 300px;
+}
+#hour-chart {
+  height: 250px;
+}
+#category-chart {
+  /*width: 250px;*/
+  height: 250px;
+}
+#type-chart {
+  /*width: 250px;*/
+  height: 250px;
+}
+#score-chart {
+  /*width: 250px;*/
+  height: 250px;
+}
+
+.custom-tooltip {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  -moz-border-radius:5px;
+  border-radius: 5px;
+  border: 2px solid #CACACA;
+  /*background: #222222; */
+  background: #fff;
+  opacity: .9;
+  /* color: #eeeeee; */
+  color: black;
+  padding: 10px;
+  width: 100px;
+  font-size: 10px;
+  z-index: 10;
+}
+
+.custom-tooltip .title {
+  font-size: 13px;
+}
+
+.custom-tooltip .name {
+  font-weight:bold;
+}
+
+.node {
+  border: solid 1px white;
+  font: 10px sans-serif;
+  line-height: 12px;
+  overflow: hidden;
+  position: absolute;
+  text-indent: 2px;
+}
+
+
+/* ---------------------------------------------------------------------- */
+/*  Box Widgets
+/* ---------------------------------------------------------------------- */
+
+.box-widget{
+  margin                : 0 0 30px 0;
+  position              : relative;
+  -moz-border-radius    : 3px;
+  -khtml-border-radius  : 3px;
+  -webkit-border-radius : 3px;
+  border-radius         : 3px;  
+  padding-left          : 5px;
+  box-shadow        : 0 1px 1px #E6E6E6;
+  -webkit-box-shadow    : 0 1px 1px #E6E6E6;
+}
+
+.box-widget > header{
+  height      : 34px; 
+  padding     : 0 0 0 10px; 
+  line-height : 40px;
+}
+
+.box-widget > header{
+  color : #333;
+  text-shadow : 0 1px 0 #FFF;
+  border: 1px solid #C2C2C2;
+  background: #fafafa;
+  background: -moz-linear-gradient(top, #fafafa 0%, #efefef 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#efefef));
+  background: -webkit-linear-gradient(top, #fafafa 0%,#efefef 100%);
+  background: -o-linear-gradient(top, #fafafa 0%,#efefef 100%);
+  background: -ms-linear-gradient(top, #fafafa 0%,#efefef 100%);
+  background: linear-gradient(to bottom, #fafafa 0%,#efefef 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#efefef',GradientType=0 );
+}
+
+.box-widget > header h2{
+  height      : 100%;
+  width       : auto;
+  float       : left;
+  font-size   : 18px;
+  position    : relative;
+  margin: 0;
+  line-height : 34px;
+}
+
+.box-widget > header h3{
+  height      : 100%;
+  width       : auto;
+  float       : left;
+  font-size   : 10px;
+  position    : relative;
+  margin: 0;
+  line-height : 34px;
+}
+/*
+.box-widget > header .jarviswidget-icon{
+  width    : 16px;
+  height   : 16px;
+  float    : left;
+  margin   : 12px 10px 0 0;
+  display  : block;
+  zoom     : 1;
+  z-index  : 4000
+} 
+*/ 
+
+.box-widget > div{
+  float                 : left;
+  width                 : 100%;
+  min-height            : 20px;
+  position              : relative;
+  font-size             : 15px;
+  -moz-border-radius    : 0px 0px 3px 3px;
+  -khtml-border-radius  : 0px 0px 3px 3px;
+  -webkit-border-radius : 0px 0px 3px 3px;
+  border-radius         : 0px 0px 3px 3px;
+  margin                : 0;
+  border-width          : 1px;
+  border-style          : solid;
+  border-top            : none;
+  border-right-color    : #C8C8C8 !important;
+  border-bottom-color   : #C8C8C8 !important;
+  border-left-color     : #C8C8C8 !important;
+
+  background-color 	  : #fff !important;
+} 
+
+/* ---------------------------------------------------------------------- */
+/*  List Boxes
+/* ---------------------------------------------------------------------- */
+
+.list-box-long{
+  height: 1020px;
+  overflow-y:auto;
+}
+
+.list-box-short{
+  max-height: 400px;
+  overflow-y:auto;
+  overflow-x:hidden;
+  list-style-type:none;
+  padding-left: 12px;
+  /*font-size:14px;*/
+}
+

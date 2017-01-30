@@ -1,0 +1,39 @@
+{
+    "MethodConfigurationFile": [
+        {
+            "MethodDefinition": [
+                {
+                    "buildGUIGraphNXDOMAINFile": [
+                        {
+                            "type": "tableNames",
+                            "table1": "srcipRGDNCallsNXDOMAIN_historical_v2"
+                        },
+                        {
+                            "type": "LocalVariables",
+                            "timeStampLiteral": "timestamp",
+                            "defaultLayout": "fr"
+                        },
+                        {
+                            "type": "query",
+                            "query1": "select trim(srcip) as source, trim(request) as target, freq as weight from <param4>.srcipRGDNCallsNXDOMAIN_historical_v2 where <timeStampBuilderAtSpecificTime> and trim(srcip)!=trim(request) ",
+                            "param": [
+                                {
+                                    "<param1>": "tzCast"
+                                },
+                                {
+                                    "<param2>": "Date"
+                                },
+              		    {
+                                    "<param4>": "DBschema"
+                                },
+                                {
+                                    "<timeStampBuilderAtSpecificTime>": "timeStamp"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

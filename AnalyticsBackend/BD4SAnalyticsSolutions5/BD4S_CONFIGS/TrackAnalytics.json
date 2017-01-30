@@ -1,0 +1,25 @@
+{
+    "MethodConfigurationFile": [
+        {
+            "MethodDefinition": [
+                {
+                    "updateTrackTimeAnalyticsTable": [
+                        {
+                            "type": "tableNames",
+                            "table1": "track_analytics_time"
+                        },
+                        {
+                            "type": "query",
+                            "query1": "Insert into track_analytics_time values('<param1>')",
+                            "param": [
+								{
+                                    "<param1>": "TimeStampBuilder"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

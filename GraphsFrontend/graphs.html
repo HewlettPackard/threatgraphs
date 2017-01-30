@@ -1,0 +1,79 @@
+<!--(c) Copyright 2017 Hewlett Packard Enterprise Development LP Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0 Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.-->
+
+<!--
+  * @author Yolanta Beresna
+  -->
+
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Threat Graphs</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/font-awesome.min.css" rel="stylesheet" media="screen">
+<link href="css/threatgraphs.css" rel="stylesheet" id="threatgraphs_css">
+
+<style>
+body {width:auto; margin-left: 25px;}
+
+</style>
+
+<body>
+
+<div id="main">
+  <div class="container">
+    <br>
+    <div class="page-header" id="header-graphs">
+    </div>
+
+      <div class="row clearfix" id="graph">
+
+        <div class="col-xs-10">
+          <div class="sigma-parent" id="sigma-graph-parent">
+            <div class="sigma-expand" id="sigma-graph"></div>
+          </div>
+        </div>
+
+        <div class="col-xs-2" id="graph-extra">
+        
+          <div class="row clearfix">
+          
+              <!-- filled in javascript by setup_filters --> 
+              <button id="color-cs1-button" type="button" class="btn btn-default" onclick="color_by_class()">Domain Classification</button><br>
+              <div id="filters_malware"></div> 
+             
+            <br> <br> <br>
+             
+                <button id="color-cat-button" type="button" class="btn btn-default" onclick="color_by_cat()">Domain Responsiveness</button><br>
+                <div id="filters_class"></div>
+           
+            <div id="buttons">
+              <!-- filled in javascript -->
+            </div>
+             
+
+          </div>
+          <div class="row clearfix">
+            <div id="node-info" data-toggle="popover" data-trigger="focus" class="clearfix"></div>
+          </div>
+        </div>
+
+      </div>
+    
+  </div>
+</div>
+
+<script src="js/libs/jquery-2.1.1.min.js" type="text/javascript"></script>
+<script src="js/libs/bootstrap.min.js" type="text/javascript"></script>
+
+<script src="js/libs/sigma.min.js" type="text/javascript"></script>
+<script src="js/libs/sigma_plugins/sigma.parsers.json.min.js" type="text/javascript"></script>
+<script src="js/libs/sigma_plugins/sigma.parsers.gexf.min.js" type="text/javascript"></script>
+<script src="js/libs/sigma_plugins/sigma.plugins.tooltips.js" type="text/javascript"></script>
+<script src="js/libs/moment.js" type="text/javascript"></script>
+<script src="js/libs/crossfilter.min.js" type="text/javascript"></script>
+
+<script src="threatgraphs_settings.js" type="text/javascript"></script>
+<script src="js/helpers.js" type="text/javascript"></script>
+<script src="js/graphs.js" type="text/javascript"></script>
+
+
+</body>

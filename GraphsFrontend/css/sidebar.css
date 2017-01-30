@@ -1,0 +1,266 @@
+(c) Copyright 2017 Hewlett Packard Enterprise Development LP Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at "http://www.apache.org/licenses/LICENSE-2.0" Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+
+
+	/* ---------------------------------------------------------------------- */
+	/*	Page aside
+	/* ---------------------------------------------------------------------- */
+
+	@font-face {
+	  font-family: 'Metric Light';
+	  font-style: normal;
+	  font-weight: normal;
+	  src: url('../fonts/Metric-Light.otf') format('truetype');
+	}
+
+	
+	
+	aside {
+		width: 350px;
+		height: 100%;
+		font-family: 'Metric Light';
+		float: left;
+		margin-top:0px;
+		padding:0 15px 20px 15px;
+		font-size: 16px;
+	}
+	
+	
+	aside h1, aside h2, aside h3, aside h4, aside h5, aside h6 {
+		color: #CACACA;
+		font-size: 23px;
+		line-height: 23px;
+		font-weight: 400;
+		position: relative;
+		display: block;
+		width:100%;
+	}
+	aside h2 {
+		font-size: 22px;
+		line-height: 22px;
+	}
+	aside h3 {
+		font-size: 20px;
+		line-height: 20px;
+	}
+	aside h4 {
+		font-size: 18px;
+		line-height: 18px;
+	}
+	aside h5 {
+		font-size: 16px;
+		line-height: 16px;
+	}
+	aside h6 {
+		font-size: 14px;
+		line-height: 14px;
+	}
+
+	
+	aside.right {
+		display:none; /* hidden for fixed layouts */
+		padding: 0 15px 20px 15px; /* padding adjusted from inherit */
+	}
+	
+	aside blockquote {
+		border-left: 1px solid #5C5C5C;
+	}aside blockquote p {
+		color:#DADADA;}
+	
+	/* ---------------------------------------------------------------------- */
+	
+	/* ---------------------------------------------------------------------- */
+	/*	Secondary Nav (inside aside)
+	/* ---------------------------------------------------------------------- */
+	
+	/* applies to ul class "menu" inside aside and ignores all child uls within */
+
+	/* Fix fontawesome icons-ul */
+
+
+	aside ul.menu {
+
+		padding-left: 0;
+		margin: -0px auto;
+		margin-bottom: 0;
+		background: #f6f6f6;
+		border: 1px solid #2c2c2c;
+		box-shadow: 0 1px 1px #606060, 0 1px 1px #2a2a2a inset;
+		-webkit-box-shadow: 0 1px 1px #606060, 0 1px 1px #2a2a2a inset;
+		-moz-box-shadow: 0 1px 1px #606060, 0 1px 1px #2a2a2a inset;
+		-webkit-border-radius: 4px 4px 4px 4px;
+		-moz-border-radius: 4px 4px 4px 4px;
+		border-radius: 4px 4px 4px 4px;
+		overflow: hidden;
+		color: white;
+		/*background: #7EA437 url(../img/backgrounds/menu_bg.png) repeat-x;*/
+		background: #B2B2B2 repeat-x;
+		-webkit-background-size: 100% 100%;
+		-moz-background-size: 100% 100%;
+		-o-background-size: 100% 100%;
+		background-size: 100% 100%;
+		/*
+		background: -webkit-gradient(linear, left top, left bottom, from(#AAD15F), to(#7EA437));
+		background: -webkit-linear-gradient(top, #AAD15F, #7EA437);
+		background: -moz-linear-gradient(top, #AAD15F, #7EA437);
+		background: -ms-linear-gradient(top, #AAD15F, #7EA437);
+		background: -o-linear-gradient(top, #AAD15F, #7EA437);
+		background: linear-gradient(top, #AAD15F, #7EA437);*/
+
+		background-image: linear-gradient(bottom, rgb(180,182,186) 15%, rgb(178,181,184) 65%, rgb(155,156,161) 83%);
+		background-image: -o-linear-gradient(bottom, rgb(180,182,186) 15%, rgb(178,181,184) 65%, rgb(155,156,161) 83%);
+		background-image: -moz-linear-gradient(bottom, rgb(180,182,186) 15%, rgb(178,181,184) 65%, rgb(155,156,161) 83%);
+		background-image: -webkit-linear-gradient(bottom, rgb(180,182,186) 15%, rgb(178,181,184) 65%, rgb(155,156,161) 83%);
+		background-image: -ms-linear-gradient(bottom, rgb(180,182,186) 15%, rgb(178,181,184) 65%, rgb(155,156,161) 83%);
+
+		background-image: -webkit-gradient(
+			linear,
+			left bottom,
+			left top,
+			color-stop(0.15, rgb(180,182,186)),
+			color-stop(0.65, rgb(178,181,184)),
+			color-stop(0.83, rgb(155,156,161))
+		);
+	}
+
+	
+	/* applies to all ul's within aside > menu */
+	
+	aside div.menu ul {
+		overflow: hidden;
+		margin:0;
+		list-style:none;
+	}
+	
+	/* applies to all li's within aside */
+	
+	aside ul.menu li {
+		list-style: none;
+		position: relative;
+		border-bottom:1px solid #6C8636;
+		border-bottom:0px solid rgba(255, 255, 255, 0);
+		-webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+		-moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+		box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.4), inset 0 -1px 0 rgba(0, 0, 0, 0.25);
+	}
+	
+	aside ul.menu li ul li {
+		border-top:1px solid #8CA758;
+		border-top:0px solid rgba(255, 255, 255, 0);
+		border-bottom:1px solid #566B29;
+		border-bottom:0px solid rgba(255, 255, 255, 0);
+	}
+
+	/* aside menu labels and bages to indicate number of hidden menu items */
+	
+	aside ul.menu  label, aside ul.menu badge, aside ul.menu .badge {
+		text-indent: 0px;
+		float: right;
+		margin-top: 7px;
+		margin-right: 7px;
+		background: url('../img/transparant-10.png');
+		background: rgba(128, 128, 128, 0.2);
+		-webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.5);
+		-moz-box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.5);
+		box-shadow: inset 0 1px 0 rgba(0, 0, 0, 0.5), 0 1px 0 rgba(255, 255, 255, 0.5);
+	}
+
+	
+	aside ul.menu > li:first-child, aside ul.menu > li:first-child > a {
+		-webkit-border-radius: 4px 4px 0px 0px;
+		-moz-border-radius: 4px 4px 0px 0px;
+		border-radius: 4px 4px 0px 0px;
+	}
+	
+	aside ul.menu > li:last-child, aside ul.menu > li:last-child > a {
+		-webkit-border-radius: 0px 0px 4px 4px;
+		-moz-border-radius: 0px 0px 4px 4px;
+		border-radius: 0px 0px 4px 4px;
+	}
+	
+	aside ul.menu a {
+		display: block;
+		height: 32px;
+		line-height: 32px;
+		width:100%;
+		text-indent: 15px;
+		text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+		padding: 5px 0px;
+		font-size: 14px;
+		font-weight: bold;
+		position:relative;
+		color:#FFF;
+	}
+	
+	aside ul.menu a i {
+		text-indent: -6px;
+	}
+	
+	aside ul.menu > li:last-child > a {
+		border-bottom: none;
+	}
+	
+	aside ul.menu > li.open > a > label, aside ul.menu > li.open > a > span, aside ul.menu > li.current > a > span {
+		background: url('../img/transparant-30.png');
+	}
+	
+	aside ul.menu > li.current > a {
+		background: url('../img/current.png') repeat;
+	}
+	
+
+		/* second level */
+		
+		aside nav span.arrow {
+			position: relative;
+			top: -1px;
+			left: 10px;
+		}
+		
+		aside ul.menu > li > ul {
+			padding-left: 0;
+			display: block;
+			background: url('../img/transparant-20.png');
+		
+		}
+		
+		aside ul.menu > li > ul > li a {
+			text-indent: 35px;
+			text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+			padding: 2px 0px;
+			font-size:13px;
+		}
+		
+		aside ul.menu > li > ul > li:first-child a {
+			border-top: 1px solid rgb(111, 111, 111);
+		}
+		
+		aside ul.menu > li > ul > li a :hover {
+			background: #d8dfea;
+		}
+	
+			/* second level selected */
+			
+			aside ul.menu a.expanded i#selected-item {
+				/*background:url('../img/pointer-menu.png') no-repeat center center transparent;*/
+				display:block;
+				width:10px;
+				height:19px;
+				position:absolute;
+				right:0px;
+				top:0px;
+				z-index: 99;
+			}
+	
+	/* menu item active/open state */
+	aside ul.menu > li > ul > li a.expanded {
+		background: url('../img/transparant-10.png') repeat;
+	}	
+	/* divider */
+	
+	aside > .divider {
+		height:11px;
+		width:100%;
+		background: url('../img/divider.png') no-repeat center 0;
+		position:relative;
+		margin:20px 0;
+	}

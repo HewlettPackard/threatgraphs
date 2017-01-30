@@ -1,0 +1,153 @@
+{
+    "BD4SanalyticConfig": [
+        {
+            "GlobalVariable": [
+                {
+                    "BD4SApplication": " Threat Graph - Backend Analytics"
+				},
+                {
+                    "CommonRestAPIPath": "http://***ADD YOUR REST API PATH***/"
+                }, 
+                {
+                    "Timezone": "UTC"
+                }, 
+                {
+                    "VerticaServerTimezone": "UTC"
+                }, 
+                {
+                    "hmsGlobal": "23:59:59"
+                }, 
+                {
+                    "TIMEFRAME": "finegrain"
+                }, 
+                {
+                    "FineGrainTimeFrameProcessingDetails": [
+                        {
+                            "Hour": "2"
+                        }, 
+                        {
+                            "Minutes": "0"
+                        }
+                    ]
+                }, 
+                {
+                    "ConfigFilesPath": "/home/ubuntu/jetty8/webapps/BD4S_CONFIGS/"
+                }, 
+                {
+                    "SendESMAlerts": "YES"
+                }, 
+                {
+                    "bd4sGUILink": "http://***HOSTNAME:8080/gui/insight.html"
+                }, 
+                {
+                    "BD4SMessagePrinting": [
+                        {
+                            "type1": "PARAMETER", 
+                            "print1": "YES"
+                        }, 
+                        {
+                            "type2": "QUERY", 
+                            "print2": "YES"
+                        }, 
+                        {
+                            "type3": "COMPUTATION_FLOW", 
+                            "print3": "YES"
+                        }, 
+                        {
+                            "type4": "RESULT", 
+                            "print4": "YES"
+                        }, 
+                        {
+                            "type5": "MISCELLANEOUS", 
+                            "print5": "YES"
+                        }, 
+                        {
+                            "type6": "RESTAPICALL", 
+                            "print6": "YES"
+                        }
+                    ]
+                }, 
+                {
+                    "ThreatIndicatorList": [
+                        {
+                            "TI1": "ADD YOUR TI INDICATOR", 
+                            "Visualize1": "YES", 
+                            "Method1": "ADDN YOUR TI METHOD"
+                        } 
+                       
+                        
+                    ]
+                }, 
+                {
+                    "AlertsList": [
+                        {
+                            "Alert1": "ADD YOUR UNIQUE ALERT ID", 
+                            "Method1": "ADD YOUR METHOD TO GENERATE ALERTS"
+                        } 
+
+                    ]
+                }, 
+                {
+                    "deleteArray": [
+  
+                    ]
+                }, 
+                {
+                    "createTables": [
+                        {
+ 
+                        }
+                    ]
+                }
+            ], 
+            "MapRestAPI": [
+
+
+				{
+                    "type": "core",
+                    "path": "query",
+                    "RestAPI": "buildGUIGraphDGAFile",
+                    "AnalyticMethod": "buildGUIGraphDGAFile",
+                    "ConfigFile": "buildGUIGraphDGAFile.json"
+                },
+                {
+                    "type": "core",
+                    "path": "query",
+                    "RestAPI": "buildGUIGraphDGAGenFile",
+                    "AnalyticMethod": "buildGUIGraphDGAGenFile",
+                    "ConfigFile": "buildGUIGraphDGAGenFile.json"
+                },
+                {
+                    "type": "core",
+                    "path": "query",
+                    "RestAPI": "getHiveplotDGA",
+                    "AnalyticMethod": "buildHiveplotDGA",
+                    "ConfigFile": "buildHiveplotDGA.json"
+                },
+                {
+                    "type": "core",
+                    "path": "query",
+                    "RestAPI": "getHiveplotBL",
+                    "AnalyticMethod": "buildHiveplotBL",
+                    "ConfigFile": "buildHiveplotBL.json"
+                },
+ 
+                {
+                    "type": "core", 
+                    "path": "query", 
+                    "RestAPI": "TrackAnalytics", 
+                    "AnalyticMethod": "updateTrackTimeAnalyticsTable", 
+                    "ConfigFile": "TrackAnalytics.json"
+                }, 
+ 
+                {
+                    "type": "CommonMethods", 
+                    "path": "Null", 
+                    "RestAPI": "Internal-CommonMethods", 
+                    "AnalyticMethod": "CommonMethods", 
+                    "ConfigFile": "CommonMethods.json"
+                }
+            ]
+        }
+    ]
+}

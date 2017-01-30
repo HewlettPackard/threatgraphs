@@ -1,0 +1,13 @@
+{
+	"databaseServer": "IP ADDRESS VERTICA SERVER",
+	"databasePort": "5433",
+	"databaseUser": "USERID",
+	"databasePassword": "PASSWORD",
+	"databaseDatabase": "DB-NAME",
+	"databaseVertica":  "DB SCHEMA-NAME",
+	"boneCPminconn": "5",
+	"boneCPmaxconn": "100",
+	"boneCPpartitions": "4",
+	"boneCPmaxConnectionAgeInSeconds": "600"
+
+}
